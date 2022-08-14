@@ -1,0 +1,24 @@
+from datetime import date
+class Student:
+
+    def __init__(self,name,gender,city,dob,phonenumber):
+        self.name=name
+        self.gender=gender
+        self.city=city
+        self.dob=dob
+        self.phonenumber=phonenumber
+
+    def address(self):
+        addr=f"Name : {self.name}\nGender : {self.gender}\ncity : {self.city}\nDob : {self.dob}\nPhonenumber : {self.phonenumber}"
+        return addr
+
+    def detail(self):
+        current_year=date.today().year
+        exp=current_year - self.phonenumber
+        return f"detail : {exp}"
+
+
+stu1=Student("Pooja","Female","Thirupathur",2002,9361489823)
+
+print(stu1.address())
+print(stu1.detail())
