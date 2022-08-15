@@ -1,0 +1,34 @@
+from datetime import date
+class Student:
+
+    def __init__(self,name,city,dob,phonenumber):
+        self.name=name
+        self.city=city
+        self.dob=dob
+        self.phonenumber=phonenumber
+        
+    def detail(self):
+        current_year=date.today().year
+        age=current_year - self.dob
+        return f"detail : {age}"
+class Female(Student):
+
+    def __init__(self,name,city,dob,phonenumber,standard,state):
+        super().__init__(name,city,dob,phonenumber,state)
+        self.standard = standard
+        self.state = state
+class Section(Female):
+    pass
+class Principal(Student):
+    def __init__(self,name,city,dob,phonenumber,state):
+        super().__init__(name,city,dob,phonenumber)
+        self.state = state
+class School(Female,Principal):
+    pass
+
+stu1=School("Pooja","Thirupathur",2003,9361489823,12,"Tamilnadu")
+stu2=School("Monika","Vellore",2005,9789587780,10,"Kerala")
+
+print(stu1.name)
+print(stu1.state)
+print(stu2.standard)
