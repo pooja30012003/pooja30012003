@@ -1,0 +1,35 @@
+from datetime import date
+class Student:
+    fees = 25000
+    no_of_stu = 0
+
+    def __init__(self,name,gender,city,dob,phonenumber):
+        self.name=name
+        self.gender=gender
+        self.city=city
+        self.dob=dob
+        self.phonenumber=phonenumber
+        Student.no_of_stu = Student.no_of_stu + 1
+
+    def address(self):
+        addr=f"Name : {self.name}\nGender : {self.gender}\ncity : {self.city}\nDob : {self.dob}\nPhonenumber : {self.phonenumber}"
+        return addr
+
+    def age(self):
+        current_year=date.today().year
+        age=current_year - self.dob
+        return f"detail : {age}"
+        
+    def pay_fees(self,amount):
+        Student.fees = Student.fees - amount
+        return Student.fees
+
+stu1=Student("Pooja","Female","Thirupathur",2002,9361489823)
+stu2=Student("Monika","Female","Vellore",2003,9789587780)
+stu3=Student("Janani","Female","Krishnagiri",2004,9003413118)
+
+print(stu1.address())
+print(stu2.age())
+print(stu3.pay_fees(10000))
+print(Student.no_of_stu)
+
