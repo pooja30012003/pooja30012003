@@ -14,8 +14,8 @@ class Student:
 
     def detail(self):
         current_year=date.today().year
-        exp=current_year - self.phonenumber
-        return f"detail : {exp}"
+        age=current_year - self.dob
+        return f"detail : {age}"
 
 
 stu1=Student("Pooja","Female","Thirupathur",2002,9361489823)
