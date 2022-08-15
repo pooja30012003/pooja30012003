@@ -1,0 +1,29 @@
+class Student:
+
+    def __init__(self,name,gender,city,dob,phonenumber):
+        self.name=name
+        self.gender=gender
+        self.city=city
+        self.dob=dob
+        self.phonenumber=phonenumber
+        
+    @classmethod
+    def stu_data(cls,data):
+        name,gender,city,dob,phonenumber = data.split(",")
+        return cls(name,gender,city,dob,phonenumber)
+    @staticmethod
+    def department(dept):
+        available_dept=['maths','biology','computerscience']
+        if dept in available_dept:
+            return True
+        return False
+        
+
+stu1=Student("Pooja","Female","Thirupathur",2002,9361489823)
+stu2=Student("Monika","Female","Vellore",2003,9789587780)
+
+data='Janani,Female,Krishnagiri,2004,9003413118'
+stu3=Student.stu_data(data)
+
+print(stu3.city)
+print(stu2.department('tamil'))
