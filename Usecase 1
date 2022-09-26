@@ -24,7 +24,7 @@ def show():
 show()
 
 output
-Enter the name: monika
-Enter the emailid: monika@gmail.com
-Enter the password: 12345
+Enter the name: divya
+Enter the emailid: divya@gmail.com
+Enter the password: fghij
 Login successfully
