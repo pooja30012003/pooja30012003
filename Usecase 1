@@ -1,0 +1,30 @@
+class login:
+    user=[{'Name':'Pooja','Emailid':'pooja@gmail.com','Password':'abcde'},{'Name':'Divya','Emailid':'divya@gmail.com','Password':'fghij'}]
+    
+    def __init__(self,Name,Emailid,Password):
+        self.Name=Name
+        self.Emailid=Emailid
+        self.Password=Password
+        
+    def sign_in(self):
+        user_detail={'Name':self.Name,'Emailid':self.Emailid,'Password':self.Password}
+        if user_detail in login.user:
+            print('Username is invalid or already taken')
+        else:
+            (login.user).append(user_detail)
+            print('Login successfully')
+            
+def show():
+    Name=input("Enter the name: ")
+    Emailid=input("Enter the emailid: ")
+    Password=input("Enter the password: ")
+    user1=login(Name,Emailid,Password)
+    user1.sign_in()
+    
+show()
+
+output
+Enter the name: monika
+Enter the emailid: monika@gmail.com
+Enter the password: 12345
+Login successfully
