@@ -1,0 +1,22 @@
+from datetime import date
+class Hotel:
+    def __init__(self,name,address):
+        self.name=name
+        self.address=address
+    def __str__(self):
+        return f'{self.address}'
+    def __repr__(self):
+        return f'Hotel({self.name})'
+        
+n1=Hotel('FIVESTAR','Vellore')
+n2=Hotel('MEALS','Chennai')
+
+print([n2],n1)
+#year of starting
+d=date(year=1999,month=6,day=30)
+print(d)
+
+
+output:
+[Hotel(MEALS)] Vellore
+1999-06-30
