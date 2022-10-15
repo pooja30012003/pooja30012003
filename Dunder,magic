@@ -1,0 +1,20 @@
+class Fruits:
+	def _init_(self,name,color):
+		self.name=name
+		self.color=color
+	def _add_(self,other):
+		return self.name+other.name
+	def _len_(self):
+		return len(self.name)
+	def _eq_(self,other):
+		return self.name==other.name
+	def _constrain_(self,other):
+		if other in self.name:
+			return True
+		return False
+fruit1=("apple")
+fruit2=("banana")
+print(fruit1+fruit2)
+print(len(fruit2))
+print(fruit1[0:4])
+print("h" in fruit2)
